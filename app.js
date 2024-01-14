@@ -4,7 +4,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 
-figlet("Hello World!!", function (err, data) {
+figlet("Hello World", function (err, data) {
     if (err) {
         console.log("Something went wrong...");
         console.dir(err);
