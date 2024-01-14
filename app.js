@@ -2,6 +2,8 @@ var figlet = require("figlet");
 const express = require('express');
 const app = express();
 
+app.set("view engine", "ejs");
+
 figlet("Hello World!!", function (err, data) {
     if (err) {
         console.log("Something went wrong...");
@@ -12,7 +14,7 @@ figlet("Hello World!!", function (err, data) {
 });
 
 app.get('/', function (req, res) {
-    res.send('Hello World')
+    res.render("index");
 });
 
 app.listen(3000);
