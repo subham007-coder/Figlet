@@ -11,10 +11,10 @@ figlet("Hello World!!", function (err, data) {
         return;
     }
     console.log(data);
-});
-
-app.get('/', function (req, res) {
-    res.render("index");
+    
+    app.get('/', function (req, res) {
+        res.render("index",{data: data});
+    });
 });
 
 app.listen(3000);
